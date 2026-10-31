@@ -2,11 +2,9 @@
 import projects from "@/data/projects";
 
 export default function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
-  if (!baseUrl) {
-    return [];
-  }
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://dimanemer-portfolio.vercel.app";
 
   const siteUrl = baseUrl.replace(/\/$/, "");
 
